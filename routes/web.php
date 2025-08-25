@@ -7,7 +7,8 @@ use App\Models\Job;
 Route::get('/', function () {
     $jobs = Job::all();
 
-    dd($jobs);
+    // The line below is the same as dd($jobs[0]["title"]);
+    dd($jobs[0]->title);
 //    return view('home');
 });
 
